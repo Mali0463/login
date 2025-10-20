@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, Pressable } from 'react-native';
 import styles from '../styles';
-import { loadMyReviews, loadFavorites } from './storage';
+import { loadMyReviews, loadFavorites } from './Components/storage';
 
 export default function Profile({ navigation }) {
   const [countReviews, setCountReviews] = useState(0);

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList } from 'react-native';
 import styles from '../styles';
-import { loadFavorites } from './storage';
+import { loadFavorites } from './Components/storage';
 
 export default function Favorites() {
   const [items, setItems] = useState([]);
