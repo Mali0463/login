@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 // REMOVE THIS: import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -26,9 +26,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+});*/
 
-/*App.js
+App.js
 import React from 'react';
 import { View, Text } from 'react-native';
 
@@ -38,4 +38,4 @@ export default function App() {
       <Text style= {{color: 'white'}}>It works 🎉</Text>
     </View>
   );
-}*/
+}
