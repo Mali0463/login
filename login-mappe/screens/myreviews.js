@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList } from 'react-native';
-import styles from '../styles';
 import { loadMyReviews } from './Components/storage';
 
 export default function MyReviews() {

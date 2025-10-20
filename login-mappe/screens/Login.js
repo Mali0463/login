@@ -1,7 +1,6 @@
 // screens/Login.js
 import React, { useState } from 'react';
-import { View, Text, TextInput, Pressable, Alert } from 'react-native';
-import styles from '../styles';
+import { View, Text, TextInput, Pressable, Alert, StyleSheet } from 'react-native';
 
 export default function Login({ route }) {
   const { onSignIn } = route.params ?? {}; // App giver en onSignIn-funktion via params
@@ -11,11 +10,15 @@ export default function Login({ route }) {
   const handleLogin = async () => {
     if (!email || !pwd) return Alert.alert('Manglende info', 'Skriv email og kodeord.');
     // her kunne du validere mod backend – vi accepterer alt != tomt
-    await onSignIn({ email }); // gemmer i AsyncStorage via App.js
+    if (onSignIn) {
+      await onSignIn({ email }); // gemmer i AsyncStorage via App.js
+    }
   };
 
   const handleGuest = async () => {
-    await onSignIn({ email: 'guest@local' });
+    if (onSignIn) {
+      await onSignIn({ email: 'guest@local' });
+    }
   };
 
   return (
@@ -50,3 +53,36 @@ export default function Login({ route }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#fff',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 15,
+    marginBottom: 15,
+    borderRadius: 5,
+    fontSize: 16,
+  },
+  btn: {
+    backgroundColor: '#007AFF',
+    padding: 15,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  btnText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});
