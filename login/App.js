@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -10,8 +10,6 @@ export default function App() {
     <View style={styles.container}>
       <Text>Velkommen!</Text>
       <StatusBar style="auto" />
-
-      {/* Viser login-komponenten */}
       <Login />
     </View>
   );
@@ -41,3 +39,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+*/
+
+// App.js
+import React from 'react';
+import { View, Text } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>It works 🎉</Text>
+    </View>
+  );
+}
