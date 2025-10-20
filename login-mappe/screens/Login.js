@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Pressable, Alert, StyleSheet } from 'react-native';
 
-export default function Login({ route }) {
-  const { onSignIn } = route.params ?? {}; // App giver en onSignIn-funktion via params
+export default function Login({ onSignIn }) { // Changed: receiving onSignIn as direct prop
   const [email, setEmail] = useState('');
   const [pwd, setPwd] = useState('');
 
