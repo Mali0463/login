@@ -3,17 +3,16 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Login from './login/screens/Login';
+import Login from './screens/Login'; // sørg for at stien passer
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Velkommen!</Text>
       <StatusBar style="auto" />
 
-      <View style={styles.container}>
-      <login/>
-      </View> 
+      {/* Viser login-komponenten */}
+      <Login />
     </View>
   );
 }
